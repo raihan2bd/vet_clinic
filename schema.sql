@@ -25,4 +25,8 @@ CREATE TABLE species (
     name VARCHAR(100)
 );
 
+-- Alter table remove column species
+ALTER TABLE animals
+    DROP COLUMN species;
+
 
