@@ -45,3 +45,8 @@ CREATE TABLE vets (
     date_of_graduation DATE
 );
 
+-- Create a join table for the specializations
+CREATE TABLE specializations (
+    species_id INT CONSTRAINT fk_specializations_species_id REFERENCES species(id),
+    vet_id INT CONSTRAINT fk_vet_id REFERENCES vets(id)
+);
