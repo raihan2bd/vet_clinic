@@ -50,3 +50,10 @@ CREATE TABLE specializations (
     species_id INT CONSTRAINT fk_specializations_species_id REFERENCES species(id),
     vet_id INT CONSTRAINT fk_vet_id REFERENCES vets(id)
 );
+
+-- Create visits table to join animals table and vets table
+CREATE TABLE visits (
+    animal_id INT CONSTRAINT fk_animal_id REFERENCES animals(id),
+    vet_id INT CONSTRAINT fk_visits_vet_id REFERENCES vets(id),
+    visited_date date NOT NULL DEFAULT CURRENT_DATE
+);
