@@ -19,4 +19,10 @@ CREATE TABLE owners (
     age INT
 );
 
+-- Create a table for the Species
+CREATE TABLE species (
+    id INT Generated ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(100)
+);
+
 
