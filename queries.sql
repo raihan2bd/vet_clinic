@@ -60,7 +60,8 @@ SELECT COUNT(*) FROM animals;
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
 SELECT ROUND(AVG(weight_kg)::numeric, 2) FROM animals;
 SELECT name FROM animals 
-  WHERE escape_attempts = (SELECT MAX(escape_attempts) FROM animals);
+  WHERE escape_attempts = (SELECT MAX(escape_attempts) FROM animals)
+  GROUP BY neutered;
 SELECT species, MIN(weight_kg), MAX(weight_kg) 
   FROM animals GROUP BY species;
 SELECT species, ROUND(AVG(escape_attempts)::numeric, 0) FROM animals 
