@@ -11,3 +11,12 @@ CREATE TABLE animals (
 -- Alter table to add a column Species
 ALTER TABLE animals
     ADD species VARCHAR(100);
+
+-- Create a table for the owners
+CREATE TABLE owners (
+    id INT Generated ALWAYS AS IDENTITY PRIMARY KEY,
+    full_name VARCHAR(100),
+    age INT
+);
+
+
