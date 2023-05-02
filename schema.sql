@@ -29,4 +29,11 @@ CREATE TABLE species (
 ALTER TABLE animals
     DROP COLUMN species;
 
+-- Alter table add column species_id with foreign key
+ALTER TABLE animals
+    ADD column species_id INT CONSTRAINT fk_species_id REFERENCES species(id);
+
+-- Alter table add column owner_id with foreign key
+ALTER TABLE animals
+    ADD column owner_id INT CONSTRAINT fk_owner_id REFERENCES owners(id);
 
