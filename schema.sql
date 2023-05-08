@@ -57,3 +57,6 @@ CREATE TABLE visits (
     vet_id INT CONSTRAINT fk_visits_vet_id REFERENCES vets(id),
     visited_date date NOT NULL DEFAULT CURRENT_DATE
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
