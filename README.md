@@ -34,8 +34,7 @@
   </ul>
 
 ### Database Diagram <a name="database-diagram"></a>
-
-`Project is under construction and database diagram will update soon.`
+![vet_clinic_diagram](https://user-images.githubusercontent.com/35267447/236870545-483a1543-0f7c-49d6-af03-a9d7c5d2d3b2.png)
 
 ### Key Features <a name="key-features"></a>
 
