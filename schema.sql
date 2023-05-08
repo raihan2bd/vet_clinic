@@ -57,3 +57,11 @@ CREATE TABLE visits (
     vet_id INT CONSTRAINT fk_visits_vet_id REFERENCES vets(id),
     visited_date date NOT NULL DEFAULT CURRENT_DATE
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- Create indexes to gain database query performance
+CREATE INDEX visits_animal_id_idx ON visits(animal_id);
+CREATE INDEX visits_vets_id_idx ON visits(vet_id);
+CREATE INDEX visits_owners_id_idx ON owners(email);

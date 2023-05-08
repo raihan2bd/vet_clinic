@@ -64,13 +64,19 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Abu Raihan**
 
 - GitHub: [@raihan2bd](https://github.com/raihan2bd)
 - Twitter: [@raihan2bd](https://twitter.com/raihan2bd)
 - LinkedIn: [raihan2bd](https://linkedin.com/in/raihan2bd)
+
+👤 **Kanu Chukwuemeka**
+
+- GitHub: [@mekuseo](https://github.com/mekuseo)
+- Twitter: [@fullstack_pison](https://twitter.com/fullstack_pison)
+- LinkedIn: [chukwuemekakanu](https://linkedin.com/in/chukwuemekakanu)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
