@@ -44,3 +44,11 @@ CREATE TABLE treatment_histories (
   medical_history_id INT CONSTRAINT fk_medical_history_id REFERENCES medical_histories(id) ON DELETE CASCADE,
   treatment_id INT CONSTRAINT fk_treatment_id REFERENCES treatments(id) ON DELETE CASCADE
 );
+
+-- Create unique indexes to improve query execution time
+ CREATE INDEX idx_medical_histories_patient_id ON medical_histories(patient_id);
+ CREATE INDEX idx_invoices_medical_history_id ON invoices(medical_history_id);
+ CREATE INDEX idx_invoice_items_invoice_id ON invoice_items(invoice_id);
+ CREATE INDEX idx_invoice_items_treatment_id ON invoice_items(treatment_id);
+ CREATE INDEX idx_treatment_histories_medical_history_id ON treatment_histories(medical_history_id);
+ CREATE INDEX idx_treatment_histories_treatment_id ON treatment_histories(treatment_id);
