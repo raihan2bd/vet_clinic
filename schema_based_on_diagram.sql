@@ -21,3 +21,10 @@ CREATE TABLE invoices (
   payed_at TIMESTAMP,
   medical_history_id INT UNIQUE CONSTRAINT fk_medical_history_id REFERENCES medical_histories(id)
 );
+
+-- Stores information about treatments
+CREATE TABLE treatments (
+  id INT PRIMARY KEY Generated Always AS Identity,
+  type VARCHAR(100),
+  name VARCHAR(100)
+);
