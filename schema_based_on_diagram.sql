@@ -28,3 +28,13 @@ CREATE TABLE treatments (
   type VARCHAR(100),
   name VARCHAR(100)
 );
+
+-- Stores invoice items for each invoice
+CREATE TABLE invoice_items (
+  id INT PRIMARY KEY Generated Always AS Identity,
+  unit_price DECIMAL,
+  quantity INT,
+  total_price DECIMAL,
+  invoice_id INT CONSTRAINT fk_invoice_id REFERENCES invoices(id),
+  treatment_id INT CONSTRAINT fk_treatment_id REFERENCES treatments(id)
+);
