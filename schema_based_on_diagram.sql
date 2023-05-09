@@ -12,3 +12,12 @@ CREATE TABLE medical_histories(
   patient_id INT CONSTRAINT fk_patient_id REFERENCES patients(id),
   status VARCHAR(100)
 );
+
+-- Stores invoices generated for medical histories
+CREATE TABLE invoices (
+  id INT PRIMARY KEY Generated Always AS Identity,
+  total_amount DECIMAL,
+  generated_at TIMESTAMP,
+  payed_at TIMESTAMP,
+  medical_history_id INT UNIQUE CONSTRAINT fk_medical_history_id REFERENCES medical_histories(id)
+);
