@@ -38,3 +38,9 @@ CREATE TABLE invoice_items (
   invoice_id INT CONSTRAINT fk_invoice_id REFERENCES invoices(id),
   treatment_id INT CONSTRAINT fk_treatment_id REFERENCES treatments(id)
 );
+
+-- Stores the history of treatments for each medical history
+CREATE TABLE treatment_histories (
+  medical_history_id INT CONSTRAINT fk_medical_history_id REFERENCES medical_histories(id) ON DELETE CASCADE,
+  treatment_id INT CONSTRAINT fk_treatment_id REFERENCES treatments(id) ON DELETE CASCADE
+);
